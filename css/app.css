@@ -1,0 +1,50 @@
+body {
+	background-color: #eef7ff;
+}
+
+.search-form {
+	margin: 25px 0;
+}
+
+.search-form #search-input {
+	text-transform: capitalize;
+}
+
+.track-list > tbody > tr td {
+	vertical-align: middle;
+	border: 0;
+}
+
+.track-info:nth-child(2n) {
+	background-color: #ccdff0;
+}
+
+.track-header > td h3 {
+	margin: 0;
+	padding: 0;
+	color: #484848;
+}
+
+.track-list > tbody > .track-details td {
+	vertical-align: top;
+	padding-bottom: 25px;
+}
+
+.artwork {
+	border: 3px solid #011180;
+}
+
+.toggle-btn {
+	font-size: 28px;
+	cursor: pointer;
+	transition: all 1.5s;	
+}
+
+.toggle-btn:hover {
+	opacity: .75;
+	transition-duration: .25s;
+}
+
+.music-icon {
+	color: #8f8f8f;
+}
