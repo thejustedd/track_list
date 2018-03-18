@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Track List</title>
+	<link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/app.css">
 </head>
@@ -40,7 +41,7 @@
 						</thead>
 						<tbody class="track-info" v-for="(track, index) in trackList" :key="index">
 							<template>
-								<tr class="short-info">
+								<tr class="short-info" @click="toggle(index)">
 									<td>
 										<img class="artwork" :src="track.artworkUrl100" :alt="track.collectionName">
 									</td>
@@ -49,7 +50,7 @@
 									<td>{{ track.collectionName }}</td>
 									<td>{{ track.primaryGenreName }}</td>
 									<td>
-										<span class="glyphicon toggle-btn" :class="[parentId == index ? 'glyphicon-minus' : 'glyphicon-plus']" @click="toggle(index)"></span>
+										<span class="glyphicon toggle-btn" :class="[parentId == index ? 'glyphicon-minus' : 'glyphicon-plus']"></span>
 									</td>
 								</tr>
 								<tr is="t-row" class="track-header" :is-active="parentId == index">

@@ -25,12 +25,12 @@ var vm = new Vue({
 			props: {
 				isActive: Boolean
 			},
-			template: '<tr v-show="isActive"><slot></slot></tr>',
+			template: '<tr v-show="isActive"><slot></slot></tr>'
 		}
 	}
 });
 
-$("#search-input").keyup((event) => {
+$('#search-input').keyup((event) => {
 	if (event.keyCode == 13) {
 		$('#search-btn').click();
 	}
